@@ -1,6 +1,7 @@
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
+import { Button } from "./components/ui/button";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -24,6 +25,9 @@ function App() {
 			<p className="read-the-docs">
 				Click on the Vite and React logos to learn more
 			</p>
+			<Button variant="default" onClick={() => setCount((count) => count + 1)}>
+				count is {count}
+			</Button>
 		</>
 	);
 }
